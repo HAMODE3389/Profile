@@ -1,0 +1,50 @@
+
+<html oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;" ondragstart="return false" onselectstart="return false" style="-moz-user-select: none; cursor: default;"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>MAD's Profile</title><link rel="icon" type="image/png" href="https://i.imgur.com/dkmYwJb.png"><meta name="keywords" content="MAD's Profile"><meta name="description" content="MAD's Profile"><meta name="author" content="MAD's Profile"><meta name="googlebot" content="all,index,follow"><meta name="robots" content="index, follow"><link  rel="Quattrocento+Sans&#39;stylesheet&#39;" type="text/css"><link rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css"></head>
+
+
+
+
+
+
+
+
+
+
+	
+              
+
+<body bgcolor="Black"><table width="100%" height="100%"><tbody><tr><td align="center">
+
+
+<center>
+<pre><center><span style="color:#090;">             __                      
+        _   / /|                     
+       |\\  \/_/                     
+       \_\| / __                     
+          \/_/__\           <span style="color:#f00;">.-=='/~\</span> 
+   ____,__/__,_____,______)<span style="color:#f00;">/   /{~}}}</span>
+   -,------,----,-----,---,<span style="color:#f00;">\'-' {{~}}</span>
+                           )<span style="color:#f00;">'-==.\}/ </span></span></center></pre>
+<center><font size="7" color="white" face="Iceland">Welcome To My Profile</font><br><br>
+
+<script>
+var audio = new Audio("https://www.mboxdrive.com/123.mp3");
+
+document.onclick = function() {
+  audio.play();
+}
+document.ondblclick=function() {
+    audio.pause();
+	
+}
+</script>
+
+<font size="4" color="white" face="MonoSpace">Don't have a good day, have a great day!<br><br><font color="Lime" face="courier New" size="7"> <marquee behavior="alternate" scrollamount="2" scrolldelay="8" width="45%"><font size="2" color="Lime" face="Courier New"></font></marquee></font><font size="3" color="Lime" face="Courier New"></font>
+<p>---------------------------------------------------------------------------------------</p>
+<div class="card"><a href="https://discord.com/users/222450422755885058"> <img src="https://lanyard-profile-readme.vercel.app/api/222450422755885058" style="padding-top: 1px;"></a></div>
+<div class="card">&nbsp;</div>
+<font size="2.5" color="white"   face="MonoSpace">- Click Anywhere To Play The Music | Double Click To Stop -<br><br>
+
+
+
+</font></center></center></td></tr></tbody></table></body></html>
