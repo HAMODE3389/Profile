@@ -1,214 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>MAD's Profile</title>
-	<script
-			  src="js/jquery-3.3.1.min.js"></script>
-</head>
-	<style type="text/css">
-		body{
-			text-align: center;
-			background-color: rgb(0,000,000);
-		}
-		*{
-			margin: 0;
-			overflow: hidden;
-		}
-		#cvn{
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		#title{
-			margin-top: 2%;
-		}
-		#ice-bear,#grizzly,#panda{
-			width: 15vw;
-		}
-		#ice-bear{
-
-			transform-origin: bottom center;
-			position: absolute;
-			bottom: 0px;
-			left: 42%;
-
-
-		}
-		#grizzly{
-			transform-origin: bottom center;
-			position: absolute;
-			bottom: 0px;
-			left: 1%;
-			opacity: 0%;
-		}
-
-		#panda{
-			transform-origin: bottom center;
-			position: absolute;
-			bottom: 0px;
-			left: 85%;
-			opacity: 0%;
-
-		}
-
-	</style>
-<body>
-		<div id="UserJsonDebug" style="color: #aaa"></div>	
-		
-		<canvas id="cvn"></canvas>
-	<svg version="1.1" id="ice-bear" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 496 415" style="enable-background:new 0 0 496 415;" xml:space="preserve" >
-		<style type="text/css">
-			.st0{display:none;}
-			.st1{fill:#F3F5E7;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-			.st2{fill:#98785F;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-			.st3{fill:#67645F;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-			.st4{fill:#FFFFFF;}
-			.st5{fill:#67645F;}
-			.st6{fill:none;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-			.st7{fill:none;stroke:#000000;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-			.st8{fill:#5F2322;}
-			.st9{fill:#FFFFFF;stroke:#070707;stroke-width:1.7008;stroke-miterlimit:10;}
-			.st10{fill:#E58A93;stroke:#050505;stroke-width:1.7008;stroke-miterlimit:10;}
-			.st11{fill:none;stroke:#050505;stroke-width:2.8346;stroke-miterlimit:10;}
-			.st12{fill:none;stroke:#050505;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-			.st13{fill:none;stroke:#070707;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-		</style>
-		<g id="Layer_1" class="st0">
-		</g>
-		<g id="ears">
-			<path class="st1" d="M105,106c0,0-21.5-25.5,0-47c21.5-18.5,35,11,35,11L105,106z"/>
-			<path class="st1" d="M371.5,71.5c0,0,18.5-26.5,2-43c-19-15-48,14-42,17S371.5,71.5,371.5,71.5z"/>
-		</g>
-		<g id="body">
-			<path class="st1" d="M27.5,423.5c0,0,27-101,32-191s69-194,180-203s191,76,194,174c18,100,40,241,40,241s34,149-44,235
-				c-86,73-143,47-152,18s-7-16-7-16s5,39-59,52c-75-15-141-6-179-106C13.5,545.5,8.3,522.5,27.5,423.5z"/>
-		</g>
-		<g id="face">
-			<ellipse transform="matrix(6.897672e-02 -0.9976 0.9976 6.897672e-02 60.0673 427.3639)" cx="259" cy="181.5" rx="18.6" ry="38"/>
-			<path class="st7" d="M329,164c0,0,43,39,3,85"/>
-			<path class="st7" d="M239.7,240.1c0,0,20.7-3.8,29.5,5.8"/>
-		</g>
-		<g id="moving">
-			<g id="eyes">
-				<g>
-					<ellipse cx="184" cy="145.5" rx="10" ry="10.5"/>
-					<ellipse cx="310" cy="141.5" rx="10" ry="10.5"/>
-				</g>
-			</g>
-		</g>
-	</svg>
-
-<svg version="1.1" id="panda" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 496 415" style="enable-background:new 0 0 496 415;" xml:space="preserve" >
-<style type="text/css">
-	.st0{display:none;}
-	.st1{fill:#F3F5E7;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st2{fill:#98785F;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st3{fill:#67645F;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st4{fill:#FFFFFF;}
-	.st5{fill:#67645F;}
-	.st6{fill:none;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#000000;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-	.st8{fill:#5F2322;}
-	.st9{fill:#FFFFFF;stroke:#070707;stroke-width:1.7008;stroke-miterlimit:10;}
-	.st10{fill:#E58A93;stroke:#050505;stroke-width:1.7008;stroke-miterlimit:10;}
-	.st11{fill:none;stroke:#050505;stroke-width:2.8346;stroke-miterlimit:10;}
-	.st12{fill:none;stroke:#050505;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-	.st13{fill:none;stroke:#070707;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-</style>
-<g id="Layer_1" class="st0">
-</g>
-<g id="ears">
-	<circle class="st3" cx="120.5" cy="98.5" r="28"/>
-	<circle class="st3" cx="353.5" cy="64.5" r="28"/>
-</g>
-<g id="body">
-	<path class="st4" d="M27.5,415.4c0,0,27-95.6,32-180.7s69-183.6,180-192.1s191,71.9,194,164.6c18,94.6,40,228,40,228
-		s34,141-44,222.3c-86,69.1-143,44.5-152,17s-7-15.1-7-15.1s5,36.9-59,49.2c-75-14.2-141-5.7-179-100.3
-		C13.5,530.8,8.3,509.1,27.5,415.4z"/>
-	<path class="st5" d="M455.4,306.6c0,0-205.1,92.1-410.3,12.2c-9.2,44.3-30.3,135.2-28.2,147.7C19,479,166,544,257,544
-		s224-44,223.8-43.5C486,464,455.4,306.6,455.4,306.6z"/>
-	<path class="st6" d="M27.5,415.2c0,0,27-95.6,32-180.7s69-183.6,180-192.1s191,71.9,194,164.6c18,94.6,40,228,40,228
-		s34,141-44,222.3c-86,69.1-143,44.5-152,17c-9-27.4-7-15.1-7-15.1s5,36.9-59,49.2c-75-14.2-141-5.7-179-100.3
-		C13.5,530.6,8.3,508.9,27.5,415.2z"/>
-</g>
-<g id="face">
-	<path class="st5" d="M124.8,153.5c-16.3,28.3-11,61.9,12,75.2c12.7,7.3,28.2,7,42.2,0.3c0-33,23-42,36.9-48.4
-		c4.7-22.4-2.6-44.3-20-54.3C173,113.1,141.1,125.2,124.8,153.5z"/>
-	<ellipse transform="matrix(0.866 -0.5 0.5 0.866 -39.117 181.7154)" class="st5" cx="319.5" cy="163.9" rx="48" ry="59.1"/>
-	<ellipse cx="237" cy="203.3" rx="29.9" ry="13.3"/>
-	<path class="st13" d="M250,176c0,0-85-6-69,75"/>
-	<path class="st13" d="M237,264c0,0,30,6,42-13"/>
-</g>
-<g id="moving">
-	<g id="eyes">
-		<ellipse transform="matrix(0.9926 -0.1214 0.1214 0.9926 -19.6292 22.2893)" cx="173.1" cy="172.2" rx="10" ry="10.5"/>
-		<ellipse transform="matrix(0.9926 -0.1214 0.1214 0.9926 -17.071 37.5882)" cx="299.9" cy="158.9" rx="10" ry="10.5"/>
-	</g>
-</g>
-</svg>
-
-
-
-	<svg version="1.1" id="grizzly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 496 415" style="enable-background:new 0 0 496 415;" xml:space="preserve" >
-<style type="text/css">
-	.st0{display:none;}
-	.st1{fill:#F3F5E7;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st2{fill:#98785F;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st3{fill:#67645F;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st4{fill:#FFFFFF;}
-	.st5{fill:#67645F;}
-	.st6{fill:none;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#000000;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-	.st8{fill:#5F2322;}
-	.st9{fill:#FFFFFF;stroke:#070707;stroke-width:1.7008;stroke-miterlimit:10;}
-	.st10{fill:#E58A93;stroke:#050505;stroke-width:1.7008;stroke-miterlimit:10;}
-	.st11{fill:none;stroke:#050505;stroke-width:2.8346;stroke-miterlimit:10;}
-	.st12{fill:none;stroke:#050505;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-	.st13{fill:none;stroke:#070707;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:10;}
-</style>
-<g id="Layer_1" class="st0">
-</g>
-<g id="ears">
-	<path class="st2" d="M123.5,71.9c0,0-23.8-22.5-3.6-39.5s34.5,12.3,34.5,12.3L123.5,71.9z"/>
-	<path class="st2" d="M363.6,41.5c0,0,17.8-23.8,38.2-10.6c20.3,13.2-5.9,36.1-5.9,36.1L363.6,41.5z"/>
-</g>
-<g id="body">
-	<path class="st2" d="M36.5,404.5c0,0,27-101,32-191s69-194,180-203s191,76,194,174c18,100,40,241,40,241s34,149-44,235
-		c-86,73-143,47-152,18s-7-16-7-16s5,39-59,52c-75-15-141-6-179-106C22.5,526.5,17.3,503.5,36.5,404.5z"/>
-</g>
-<g id="face">
-	<ellipse cx="262.2" cy="162.2" rx="34.6" ry="16.9"/>
-	<path class="st7" d="M349,162c0,0,22,32,0,73"/>
-	<g>
-		<path class="st8" d="M217.5,181.5c-24-2-44,14-41,49s48,48,82,48s94-38,75-66s-43-10-64-13S241.5,183.5,217.5,181.5z"/>
-		<path class="st9" d="M276,200c0,0,7,17.4,20,17s15-17,14-20C303,195,276,200,276,200z"/>
-		<path class="st9" d="M236,186c0,0-4,23,11,30s29-14,28-16C261,201,236,186,236,186z"/>
-		<path class="st9" d="M196,186c-7,8,5,25.3,18,25s26-22,19-26S203,178,196,186z"/>
-		<path class="st10" d="M195.4,261.5c0,0,20.6-11.5,48.6-11.5s44.1,21.8,44.1,21.8s-18.1,10.2-47.6,5.5
-			C213,274,195.4,261.5,195.4,261.5z"/>
-		<path class="st11" d="M217.5,181.5c-24-2-44,14-41,49s48,48,82,48s94-38,75-66s-43-10-64-13S241.5,183.5,217.5,181.5z"/>
-	</g>
-	<path class="st12" d="M234,133.6c0,0,32.2-17.6,68,0.9"/>
-</g>
-<g id="moving">
-	<g id="eyes">
-		<g>
-
-				<ellipse transform="matrix(6.496555e-02 -0.9979 0.9979 6.496555e-02 72.1273 310.4856)" cx="201.7" cy="116.8" rx="10.5" ry="10"/>
-
-				<ellipse transform="matrix(6.496555e-02 -0.9979 0.9979 6.496555e-02 187.5624 450.6605)" cx="334.3" cy="125.2" rx="10.5" ry="10"/>
-		</g>
-	</g>
-</g>
-</svg>
-
-
-
-
-</body>
-<script type="text/javascript" src="js/js.js"></script>
-<script type="text/javascript" src="js/snow.js"></script>
+<html oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;" ondragstart="return false" onselectstart="return false" style="-moz-user-select: none; cursor: default;">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      <title>MAD's Profile</title>
+      <link rel="icon" type="image/png" href="https://i.imgur.com/dkmYwJb.png">
+      <meta name="keywords" content="MAD's Profile">
+      <meta property="og:image" content="https://i.imgur.com/ocnaTT3.png">
+      <meta name="description" content="- Everyone Deserve a Flower">
+      <meta name="author" content="MAD's Profile">
+      <script type="text/javascript" src="Rain.js"></script>
+      <link rel="stylesheet"  href="Rain.css">
+   </head>
+   <body bgcolor="Black">
+      <table width="100%" height="100%">
+         <tbody>
+            <tr>
+               <td align="center">
+                  <center>
+                     <pre><center><span style="color:#090;">             __                      
+        _   / /|                     
+       |\\  \/_/                     
+       \_\| / __                     
+          \/_/__\           <span style="color:#f00;">.-=='/~\</span> 
+   ____,__/__,_____,______)<span style="color:#f00;">/   /{~}}}</span>
+   -,------,----,-----,---,<span style="color:#f00;">\'-' {{~}}</span>
+                           )<span style="color:#f00;">'-==.\}/ </span></span></center></pre>
+                     <center>
+                        <font size="7" color="white" face="Iceland">Discord : MAD#1000</font><br><br>
+                        <script>
+                           var audio = new Audio("https://www.mboxdrive.com/MadProfile.mp3");
+                           
+                           document.onclick = function() {
+                             audio.play();
+                           }
+                           document.ondblclick=function() {
+                               audio.pause();
+                           	
+                           }
+                        </script>
+                        <font size="4" color="white" face="MonoSpace">Don't have a good day, have a great day!<br><br>
+                        <font color="Lime" face="courier New" size="7">
+                           <marquee behavior="alternate" scrollamount="2" scrolldelay="8" width="45%"><font size="2" color="Lime" face="Courier New"></font></marquee>
+                        </font>
+                        <font size="3" color="Lime" face="Courier New"></font>
+                        <p><span style="color: #008000;">-</span><span style="color: #ff0000;"><span style="color: #008000;">--</span></span></p>
+                        <div class="card">&nbsp;</div>
+                        <font size="2.5" color="white"   face="MonoSpace">- Click Anywhere To Play The Music | Double Click To Stop -<br><br><span></span><a title="My Instagram" href="https://www.instagram.com/hamode3389/" target="_blank"><img src="https://i.imgur.com/FPdMbCO.png" alt="" width="16" height="16" /></a>
+                        </font>
+                     </center>
+                  </center>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
 </html>
