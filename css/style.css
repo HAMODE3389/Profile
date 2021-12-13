@@ -1,108 +1,67 @@
-body {
-  background-image: url("https://wallpaperaccess.com/full/2864507.png");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #0c0c0c;
+  font-family: "Josefin Sans", cursive;
+  overflow: hidden;
+  cursor: progress;
 }
 
-
-.terminal-window {
-  text-align: left;
-  width: 600px;
-  height: 360px;
-  border-radius: 10px;
-  margin: auto;
-  position: relative;
-  top: 70px;
-}
-
-.terminal-window header {
-  background: #E0E8F0;
-  height: 30px;
-  border-radius: 8px 8px 0 0;
-  padding-left: 10px;
-}
-
-.terminal-window header .button {
-  width: 12px;
-  height: 12px;
-  margin: 10px 4px 0 0;
-  display: inline-block;
-  border-radius: 8px;
-}
-
-.terminal-window header .button.green {
-  background: #3BB662;
-}
-
-.terminal-window header .button.yellow {
-  background: #E5C30F;
-}
-
-.terminal-window header .button.red {
-  background: #E75448;
-}
-
-.terminal-window section.terminal {
-  color: white;
-  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
-  font-size: 11pt;
-  background: #30353A;
-  padding: 10px;
-  box-sizing: border-box;
+.bg-svg-container {
   position: absolute;
-  width: 100%;
-  top: 30px;
-  bottom: 0;
-  overflow: auto;
-  opacity: 80%;
+  width: 100vh;
+}
+.bg-svg-container path, .bg-svg-container line {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #ffffff;
+  stroke-width: 4px;
 }
 
-.terminal-window section.terminal .typed-cursor {
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+.svg-container {
+  width: 160px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+.svg-container path, .svg-container line {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #ffffff;
+  stroke-width: 1px;
 }
 
-.terminal-data { display: none; }
-.terminal-window .gray { color: gray; }
-.terminal-window .green { color: green;}
+svg {
+  display: block;
+}
 
 p {
-  position: relative;
-  top: 35px;
-  font-family: sans-serif;
-  text-transform: uppercase;
+  padding-top: 1em;
+  padding-right: 2em;
+  color: white;
   text-align: center;
-  font-size: 70%;
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(90deg, #fff, #3d85c6, #fff);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 2s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
-@keyframes animate {
+@keyframes blink {
   0% {
-    background-position: -300%;
+    opacity: 0;
   }
-  100% {
-    background-position: 300%;
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
+.mer {
+  animation: blink 1s infinite;
+}
+
+.ocean {
+  animation: blink 1s infinite 0.25s;
+}
+
+
+	
